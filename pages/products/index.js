@@ -1,11 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 function ProductList({ products }) {
-  const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
   return (
     <>
       <h1>List of Products</h1>
@@ -26,11 +21,13 @@ function ProductList({ products }) {
 }
 export default ProductList;
 export async function getStaticProps() {
+  console.log("Generating / Regenerating ProductList");
   const response = await fetch("http://localhost:4000/products/");
   const data = await response.json();
   return {
     props: {
       products: data,
     },
+    revalidate: 10,
   };
 }
