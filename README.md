@@ -1,22 +1,19 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Purpose of this repository is to showcase a bunch of the different cool rendering strategies available within Next.js (static generation, incremental static regeneration, on-demand incremental static regeneration, client side rendering and server side rendering).
+
 ## Getting Started
 
-First, run the development server:
+To test rendering strategies start with:
+npm run start
+npm run serve-json --watch db.json --port 4000
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Rendering Strategy Legend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**/posts/** is used to showcase **static generation** on a static path.
+**/posts/[postid].js** is used to showcase **static generation with dynamic routes (getStaticPaths)**.
+**/news/** is used to showcase **server side rendering**
+**/products/** is used to showcase **incremental static regeneration** with a set revalidation period.
 
 ## Learn More
 
