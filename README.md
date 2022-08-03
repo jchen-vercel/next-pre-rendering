@@ -11,8 +11,11 @@ npm run serve-json --watch db.json --port 4000
 ## Rendering Strategy Legend
 
 **/posts/** is used to showcase **static generation** on a static path.
+
 **/posts/[postid].js** is used to showcase **static generation with dynamic routes (getStaticPaths)**.
+
 **/news/** is used to showcase **server side rendering**
+
 **/products/** is used to showcase **incremental static regeneration** with a set revalidation period.
 
 ## Learn More
